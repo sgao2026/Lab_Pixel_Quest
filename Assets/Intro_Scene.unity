@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 32403401}
   - component: {fileID: 32403402}
   m_Layer: 0
-  m_Name: hat brin
+  m_Name: hat brim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -368,7 +368,7 @@ Transform:
   m_GameObject: {fileID: 449468217}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -0.64, z: 0}
+  m_LocalPosition: {x: 0, y: -0.64, z: 0}
   m_LocalScale: {x: 1.3682916, y: 1.3682916, z: 1.3682916}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -704,7 +704,7 @@ Transform:
   m_GameObject: {fileID: 684383070}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: -0.2716, z: 0}
+  m_LocalPosition: {x: 0, y: -0.2716, z: 0}
   m_LocalScale: {x: 1, y: 0.6884, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
