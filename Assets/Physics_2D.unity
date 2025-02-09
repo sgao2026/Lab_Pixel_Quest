@@ -1082,8 +1082,8 @@ AreaEffector2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_UseGlobalAngle: 0
-  m_ForceAngle: 0
-  m_ForceMagnitude: 100
+  m_ForceAngle: 90
+  m_ForceMagnitude: 1000
   m_ForceVariation: 0
   m_ForceTarget: 0
   m_Drag: 0
@@ -1197,8 +1197,8 @@ Transform:
   m_GameObject: {fileID: 1096155816}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.45, y: -4.04, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -7.829, y: -3.6815, z: 0}
+  m_LocalScale: {x: 2.242, y: 2.242, z: 2.242}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
