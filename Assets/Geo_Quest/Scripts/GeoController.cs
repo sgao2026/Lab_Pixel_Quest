@@ -5,7 +5,11 @@ using UnityEngine;
 public class GeoController : MonoBehaviour
 {
     string greet0 = "Hello";
-    int var = 3;
+    // int var = 3;
+    private Vector3 up = new Vector3(0, 1, 0);
+    private Vector3 down = new Vector3(0, -1, 0);
+    private Vector3 right = new Vector3(1, 0, 0);
+    private Vector3 left = new Vector3(-1, 0, 0);
     
     // Start is called before the first frame update
     void Start()
@@ -17,8 +21,21 @@ public class GeoController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(var);
-        Debug.Log(transform.position);
-        var++;
+        if (Input.GetKeyDown(KeyCode.W)) // wasd control
+        {
+            transform.position += up;
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            transform.position += down;
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            transform.position += right;
+        }
+        else if (Input.GetKeyDown(KeyCode.A))
+        {
+            transform.position += left;
+        }
     }
 }
