@@ -56,4 +56,15 @@ public class GeoController : MonoBehaviour
         // rb.velocity = new Vector2(0, 0);
         // transform.position += direction;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        switch (collision.tag)
+        {
+            case ("Death"):
+                {
+                    Debug.Log("Player Has Died");
+                    break;
+                }
+        }
+    }
 }
