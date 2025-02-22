@@ -23,21 +23,24 @@ public class GeoController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W)) // wasd control
+        Vector3 direction = new Vector3(0, 0, 0);
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) // wasd + arrow keys control
         {
-            transform.position += up;
+            direction += up;
         }
-        else if (Input.GetKeyDown(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            transform.position += down;
+            direction += down;
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            transform.position += right;
+            direction += right;
         }
-        else if (Input.GetKeyDown(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.position += left;
+            direction += left;
         }
+
+        transform.position += direction;
     }
 }
