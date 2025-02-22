@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
 using Unity.VisualScripting;
 using UnityEditor.Build.Reporting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GeoController : MonoBehaviour
 {
     string greet0 = "Hello";
+    public string nextLevel;
     // int var = 3;
-    private static float step = 2f;
+    private static float step = 5f;
     //private Vector3 up = new Vector3(0, step, 0);
     //private Vector3 down = new Vector3(0, -1 * step, 0);
     //private Vector3 right = new Vector3(step, 0, 0);
@@ -62,9 +65,14 @@ public class GeoController : MonoBehaviour
         {
             case ("Death"):
                 {
-                    Debug.Log("Player Has Died");
+                    string curr = SceneManager.GetActiveScene().name;
+                    SceneManager.LoadScene(curr);
                     break;
                 }
+            case ("Finish"): {
+                SceneManager.LoadScene(nextLevel);
+                break;
+            }
         }
     }
 }
