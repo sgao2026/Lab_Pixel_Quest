@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class GeoController : MonoBehaviour
 {
-    string greet0 = "Hello";
+    // string greet0 = "Hello";
     public string nextLevel;
     // int var = 3;
     private static float step = 5f;
@@ -65,8 +65,7 @@ public class GeoController : MonoBehaviour
         {
             case ("Death"):
                 {
-                    string curr = SceneManager.GetActiveScene().name;
-                    SceneManager.LoadScene(curr);
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                     break;
                 }
             case ("Finish"): {
