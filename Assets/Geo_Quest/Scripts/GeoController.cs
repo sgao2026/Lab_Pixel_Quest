@@ -54,8 +54,7 @@ public class GeoController : MonoBehaviour
         } */
 
         float xInput = Input.GetAxis("Horizontal");
-        float yInput = Input.GetAxis("Vertical") == 0 ? rb.velocity.y : Input.GetAxis("Vertical") * step;
-        rb.velocity = new Vector2(xInput * step, yInput);
+        rb.velocity = new Vector2(xInput * step, rb.velocity.y);
         // rb.velocity = new Vector2(0, 0);
         // transform.position += direction;
     }
@@ -73,5 +72,18 @@ public class GeoController : MonoBehaviour
                 break;
             }
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        switch (collision.tag)
+        {
+            case ("Bounds"):
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    break;
+                }
+        }
+
     }
 }
