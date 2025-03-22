@@ -63,10 +63,16 @@ public class GeoController : MonoBehaviour
                     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                     break;
                 }
-            case ("Finish"): {
-                SceneManager.LoadScene(nextLevel);
-                break;
-            }
+            case ("Finish"): 
+                {
+                    SceneManager.LoadScene(nextLevel);
+                    break;
+                }
+            case ("Portal"):
+                {
+                    rb.gravityScale *= -1;
+                    break;
+                }
         }
     }
 
