@@ -22,16 +22,18 @@ public class PlayerStats : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        switch(collision.tag) {
+        switch (collision.tag)
+        {
             case ("Death"):
                 {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                     break;
                 }
             case ("Finish"):
-            {
-                SceneManager.LoadScene(nextLevel);
-                break;
-            }
+                {
+                    SceneManager.LoadScene(nextLevel);
+                    break;
+                }
+        }
     }
 }
