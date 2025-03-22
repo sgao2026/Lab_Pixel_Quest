@@ -18,6 +18,7 @@ public class GeoController : MonoBehaviour
     //private Vector3 left = new Vector3(-1 * step, 0, 0);
 
     private Rigidbody2D rb;
+    private SpriteRenderer s;
     
     // Start is called before the first frame update
     void Start()
@@ -26,37 +27,32 @@ public class GeoController : MonoBehaviour
         //Debug.Log(greet0 + " " + greet1);
 
         rb = GetComponent<Rigidbody2D>();
+        s = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Vector3 direction = new Vector3(0, 0, 0);
-        /* if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) // wasd + arrow keys control
-        {
-            // direction += up;
-            rb.velocity = new Vector2(rb.velocity.x, step);
-        }
-        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-        {
-            // direction += down;
-            rb.velocity = new Vector2(rb.velocity.x, -1 * step);
-        }
-        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            // direction += right;
-            rb.velocity = new Vector2(step, rb.velocity.y);
-        }
-        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            // direction += left;
-            rb.velocity = new Vector2(-1 * step, rb.velocity.y);
-        } */
-
         float xInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(xInput * step, rb.velocity.y);
         // rb.velocity = new Vector2(0, 0);
         // transform.position += direction;
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Debug.Log("color red triggered");
+            s.color = new Color(209, 46, 46, 1);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Debug.Log("color green triggered");
+            s.color = new Color(30, 158, 51, 1);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            Debug.Log("color blue triggered");
+            s.color = new Color(75, 176, 227, 1);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
