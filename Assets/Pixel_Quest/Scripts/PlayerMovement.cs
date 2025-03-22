@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _sr = transform.Find("Sprite").GetComponent<SpriteRenderer>();
+        _sr.flipX = true;
     }
 
     // Update is called once per frame
