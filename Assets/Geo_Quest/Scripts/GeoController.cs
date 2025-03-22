@@ -40,18 +40,18 @@ public class GeoController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Debug.Log("color red triggered");
-            s.color = new Color(209, 46, 46, 1);
+            // Debug.Log("color red triggered");
+            s.color = new Color(209f / 255, 46f / 255, 46f / 255, 1);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Debug.Log("color green triggered");
-            s.color = new Color(30, 158, 51, 1);
+            // Debug.Log("color green triggered");
+            s.color = new Color(30f / 255, 158f / 255, 51f / 255, 1);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            Debug.Log("color blue triggered");
-            s.color = new Color(75, 176, 227, 1);
+            // Debug.Log("color blue triggered");
+            s.color = new Color(75f / 255, 176f / 255, 227f / 255, 1);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
