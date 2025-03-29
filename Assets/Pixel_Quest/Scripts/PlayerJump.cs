@@ -22,7 +22,7 @@ public class PlayerJump : MonoBehaviour
     private Vector2 _gravityVector;
 
     // water
-    private bool _waterCheck;
+    public bool _waterCheck;
 
     // Start is called before the first frame update
     void Start()
@@ -43,10 +43,11 @@ public class PlayerJump : MonoBehaviour
         if (_rb.velocity.y < 0 && !_waterCheck)
         {
             _rb.velocity += _gravityVector * (fallForce * Time.deltaTime);
+            Debug.Log(_rb.velocity);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Water")) { _waterCheck = true; }
     }
