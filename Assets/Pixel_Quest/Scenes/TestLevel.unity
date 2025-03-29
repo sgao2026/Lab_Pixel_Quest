@@ -4084,7 +4084,7 @@ GameObject:
   - component: {fileID: 1658598205}
   m_Layer: 0
   m_Name: Water
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4802,6 +4802,8 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 128
+  jumpForce: 10
+  fallForce: 2
 --- !u!114 &1751687895
 MonoBehaviour:
   m_ObjectHideFlags: 0
