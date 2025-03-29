@@ -3224,7 +3224,7 @@ MonoBehaviour:
   m_ScreenX: 0.5
   m_ScreenY: 0.6
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0.5
+  m_DeadZoneWidth: 0.25
   m_DeadZoneHeight: 0.15
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
@@ -4763,6 +4763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3461bb64bb2d8d243b9b86c1d8c473c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  JumpForce: 5
 --- !u!114 &1751687895
 MonoBehaviour:
   m_ObjectHideFlags: 0
